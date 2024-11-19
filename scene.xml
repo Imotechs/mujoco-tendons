@@ -1,0 +1,19 @@
+<mujoco>
+    <asset>
+        
+        <texture name ="text_plane" type="2d" builtin="checker" rgb1='237 27 12' rgb2='.1 .15 .2'
+        width ="512" height='512' mark="cross" markrgb ='.8 .8 .8'
+        />
+      
+      <material name ="matfloor" reflectance=".3" texture="text_plane" texrepeat="10 2" texuniform="true"/>
+      <material name ="wallfloor" reflectance=".3"  rgba=".5 .5 .5 1"/>
+    </asset>
+
+    <worldbody>
+        <light diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 2.0" dir="0 0 -1" castshadow="false"/>
+        <light directional="true" diffuse=".8 .8 .8" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1"/>
+          <geom name="plane_ground" type="plane" size="0 0 1" pos="0 0 0" quat="1 0 0 0" material="matfloor" condim="1"/>
+
+       
+    </worldbody>
+  </mujoco>
